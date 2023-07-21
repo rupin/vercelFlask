@@ -18,7 +18,7 @@ def incoming():
     mediaLength = request.form["NumMedia"]
     print(mediaLength)
     if(int(mediaLength)>0):
-        print(request.form["MediaContentType"])
+        print(request.form["MediaContentType0"])
 
     
     return "Hello!"
