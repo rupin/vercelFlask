@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import logging
 
 app = Flask(__name__)
@@ -12,7 +12,9 @@ def home():
 def about():
     return 'About'
 
-@app.route('/incoming')
+@app.route('/incoming', methods = ['GET', 'POST'])
 def incoming():
     print('This is a debug message')
-    return "Something Else"
+    From = request.form["From"]
+    print("From: %s" % From)
+    return "Hello!"
