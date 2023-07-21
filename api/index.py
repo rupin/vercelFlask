@@ -17,7 +17,7 @@ def incoming():
     print('This is a debug message')
     mediaLength = request.form["NumMedia"]
 
-    if(mediaLength>0):
+    if(int(mediaLength)>0):
         print(request.form["MediaContentType"])
     
     return "Hello!"
