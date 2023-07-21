@@ -15,6 +15,9 @@ def about():
 @app.route('/incoming', methods = ['GET', 'POST'])
 def incoming():
     print('This is a debug message')
-    From = request.form["From"]
-    print("From: %s" % From)
+    mediaLength = request.form["NumMedia"]
+
+    if(mediaLength>0):
+        print(request.form["MediaContentType"])
+    
     return "Hello!"
