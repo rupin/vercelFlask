@@ -14,3 +14,4 @@ def about():
 @app.route('/incoming')
 def incoming():
     logging.debug('This is a debug message')
+    return "Something"
